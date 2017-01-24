@@ -2321,7 +2321,7 @@ function edit_file_form(){
     <input type=hidden name=current_dir value=\"$current_dir\">
     <input type=hidden name=filename value=\"$filename\">
     <tr><th colspan=2>".$file."</th></tr>
-    <tr><td colspan=2><textarea name=file_data style='width:1000px;height:680px;border: 1px solid #ccc;'>".html_encode($file_data)."</textarea></td></tr>
+    <tr><td colspan=2><textarea name=file_data style='width:1000px;height:680px;border: 1px solid #ccc;' onkeydown='if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+" . htmlspecialchars(json_encode("\t")) . "+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}'>".html_encode($file_data)."</textarea></td></tr>
     <tr><td><input type=button value=\"".et('Refresh')."\" onclick=\"document.edit_form_refresh.submit()\"></td><td align=right><input type=button value=\"".et('SaveFile')."\" onclick=\"go_save()\"></td></tr>
     </form>
     <form name=\"edit_form_refresh\" action=\"".$fm_path_info["basename"]."\" method=\"post\">
