@@ -2314,7 +2314,7 @@ function edit_file_form(){
     fclose($fh);
     html_header();
     echo "<body marginwidth=\"0\" marginheight=\"0\">
-    <table border=0 cellspacing=0 cellpadding=5 align=center style=\"padding:5px;\">
+    <table border=0 cellspacing=0 cellpadding=0 align=center style=\"padding:5px;\">
     <form name=\"edit_form\" action=\"".$fm_path_info["basename"]."\" method=\"post\">
     <input type=hidden name=action value=\"7\">
     <input type=hidden name=save_file value=\"1\">
