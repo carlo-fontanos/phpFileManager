@@ -93,7 +93,7 @@ function get_client_ip() {
     return $ipaddress;
 }
 $ip = @get_client_ip();
-$lan_ip = @socket_get_lan_ip();
+$lan_ip = ''; /*@socket_get_lan_ip();*/
 $is_windows = (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN');
 function getServerURL() {
     $url = ($_SERVER["HTTPS"] == "on")?"https://":"http://";
